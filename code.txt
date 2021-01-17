@@ -15,6 +15,7 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     log.LogInformation((obj.id).ToString());
     log.LogInformation(obj.name);
     log.LogInformation((obj.rating).ToString());
+    log.LogInformation((obj.money).ToString());
 
     return (ActionResult)new OkObjectResult(obj);
 }
@@ -24,4 +25,5 @@ public class Course
     public int id {get;set;}
     public string name {get;set;}
     public double rating;
+    public double money;
 }
